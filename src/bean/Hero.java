@@ -18,7 +18,11 @@ public class Hero {
         this.hp = hp;
         this.damage = damage;
     }
-
+    public Hero(String name, float hp, int damage) {
+        this.name = name;
+        this.hp = hp;
+        this.damage = damage;
+    }
     public int getId() {
         return id;
     }

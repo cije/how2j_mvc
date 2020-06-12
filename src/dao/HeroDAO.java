@@ -51,7 +51,7 @@ public class HeroDAO implements DAO {
         try (Connection connection = getConnection(); PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
             ps.setString(1, h.getName());
             ps.setFloat(2, h.getHp());
-            ps.setInt(3, h.getId());
+            ps.setInt(3, h.getDamage());
             ps.execute();
             ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {

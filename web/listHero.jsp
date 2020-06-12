@@ -39,26 +39,52 @@
             <td>${hero.hp}</td>
             <td>${hero.damage}</td>
             <td><a href="editHero?id=${hero.id}">edit</a></td>
-            <td><a href="deleteHero?id=${hero.id}">delete</a></td>
+            <script>
+                function confirmDel() {
+                    return confirm("确定要删除吗？");
+                }
+            </script>
+            <td><a onclick="return confirmDel();" href="deleteHero?id=${hero.id}">delete</a></td>
         </tr>
     </c:forEach>
-<%--    <tr>--%>
-<%--        <td colspan="6" align="center">--%>
-<%--            <a href="?start=0">[首 页]</a>--%>
-<%--            <a href="?start=${pre}">[上一页]</a>--%>
-<%--            <a href="?start=${next}">[下一页]</a>--%>
-<%--            <a href="?start=${last}">[末 页]</a>--%>
-<%--        </td>--%>
-<%--    </tr>--%>
+    <%--    <tr>--%>
+    <%--        <td colspan="6" align="center">--%>
+    <%--            <a href="?start=0">[首 页]</a>--%>
+    <%--            <a href="?start=${pre}">[上一页]</a>--%>
+    <%--            <a href="?start=${next}">[下一页]</a>--%>
+    <%--            <a href="?start=${last}">[末 页]</a>--%>
+    <%--        </td>--%>
+    <%--    </tr>--%>
 </table>
 <nav>
     <ul class="pager">
 
-        <li><a href="?start=0">首  页</a></li>
+        <li><a href="?start=0">首 页</a></li>
         <li><a href="?start=${pre}">上一页</a></li>
         <li><a href="?start=${next}">下一页</a></li>
-        <li><a href="?start=${last}">末  页</a></li>
+        <li><a href="?start=${last}">末 页</a></li>
     </ul>
 </nav>
+<div style="margin:50px auto; width:300px">
+    <form method="post" action="addHero">
+        <table>
+            <tr>
+                <td>name:</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td>hp:</td>
+                <td><input type="text" name="hp"></td>
+            </tr>
+            <tr>
+                <td>damage:</td>
+                <td><input type="text" name="damage"><br/></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="添加英雄数据"></td>
+            </tr>
+        </table>
+    </form>
+</div>
 </body>
 </html>

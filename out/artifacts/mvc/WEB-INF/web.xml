@@ -29,4 +29,22 @@
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HeroAddServlet</servlet-name>
+        <servlet-class>servlet.HeroAddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HeroAddServlet</servlet-name>
+        <url-pattern>/addHero</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HeroDelServlet</servlet-name>
+        <servlet-class>servlet.HeroDelServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HeroDelServlet</servlet-name>
+        <url-pattern>/deleteHero</url-pattern>
+    </servlet-mapping>
 </web-app>
