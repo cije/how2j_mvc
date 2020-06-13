@@ -38,7 +38,12 @@
             <td>${hero.name}</td>
             <td>${hero.hp}</td>
             <td>${hero.damage}</td>
-            <td><a href="editHero?id=${hero.id}">edit</a></td>
+            <script>
+                function confirmEdit() {
+                    return confirm("确定要修改吗？");
+                }
+            </script>
+            <td><a onclick="return confirmEdit();" href="editHero?id=${hero.id}">edit</a></td>
             <script>
                 function confirmDel() {
                     return confirm("确定要删除吗？");

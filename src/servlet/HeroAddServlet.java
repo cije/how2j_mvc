@@ -12,7 +12,6 @@ import java.io.IOException;
 public class HeroAddServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("UTF-8");
         String name=req.getParameter("name");
         float hp=Float.parseFloat(req.getParameter("hp"));
         int damage=Integer.parseInt(req.getParameter("damage"));

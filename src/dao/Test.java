@@ -10,7 +10,6 @@ public class Test {
 //        for (Hero hero : list) {
 //            System.out.println(hero.toString());
 //        }
-        int num=new HeroDAO().getTotal();
-        System.out.println(num);
+        System.out.println(new UserDAO().judge("admin","admin"));
     }
 }

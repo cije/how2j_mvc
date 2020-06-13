@@ -18,8 +18,6 @@ public class HeroListServlet extends HttpServlet {
             resp.sendRedirect("./");
             return;
         }
-
-        resp.setContentType("text/html;charset=UTF-8");
         int start = 0, count = 5;
         try {
             start = Integer.parseInt(req.getParameter("start"));
