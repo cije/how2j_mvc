@@ -83,4 +83,26 @@
         <filter-name>AuthFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+    
+    <listener>
+        <listener-class>listener.ContextListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>listener.ContextAttributeListener</listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>listener.SessionListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>listener.SeesionAttributeListener</listener-class>
+    </listener>
+    
+    <listener>
+        <listener-class>listener.RequestListener</listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>listener.OnlineNumberListener</listener-class>
+    </listener>
 </web-app>
